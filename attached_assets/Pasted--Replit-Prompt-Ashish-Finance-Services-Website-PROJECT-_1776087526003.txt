@@ -1,0 +1,455 @@
+# 🏦 Replit Prompt: Ashish Finance Services Website
+
+---
+
+## PROJECT OVERVIEW
+
+Build a **premium 5-page financial services website** for **Ashish Finance Services** owned by Mr. Ashish Vilas Urkude. The website should feel **luxury, trustworthy and authoritative** — like a high-end wealth management firm. The language mix is **English + Marathi** (Marathi used for taglines, section subheadings, trust lines, and emotional appeal phrases).
+
+---
+
+## TECH STACK
+
+- **HTML5 + CSS3 + Vanilla JavaScript** (no frameworks needed)
+- All pages in separate HTML files
+- Shared `style.css` and `script.js`
+- Google Fonts for typography
+- No backend required — purely static site
+- Mobile responsive (works on all screen sizes)
+
+---
+
+## THEME & DESIGN SYSTEM
+
+### Color Palette
+```
+--gold-primary: #C9A84C
+--gold-light: #E8C96D
+--gold-dark: #A0823A
+--black-deep: #0A0A0A
+--black-card: #111111
+--black-surface: #1A1A1A
+--white-text: #F5F5F0
+--white-muted: #BBBBAA
+--gold-gradient: linear-gradient(135deg, #C9A84C, #E8C96D, #A0823A)
+```
+
+### Typography
+- **Display / Headings**: `Playfair Display` (Google Fonts) — elegant serif
+- **Body text**: `DM Sans` (Google Fonts) — modern, readable
+- **Marathi text**: Use `Noto Sans Devanagari` (Google Fonts)
+
+### Design Style
+- Dark background (#0A0A0A) with gold accents
+- Cards with subtle gold borders and dark surfaces
+- Gold shimmer/glow effects on hover
+- Thin gold horizontal divider lines between sections
+- Subtle diagonal or radial gold gradient overlays in hero section
+- Premium drop shadows using gold tones: `box-shadow: 0 4px 30px rgba(201,168,76,0.15)`
+- Smooth scroll behavior
+- Fade-in animations on scroll (Intersection Observer API)
+
+---
+
+## NAVIGATION (Shared across all pages)
+
+**Sticky navbar** — black background with gold logo and links:
+
+```
+[LOGO IMAGE]  |  Home  About  Services  License  Contact Us
+                                              [WhatsApp Button - gold]
+```
+
+- Logo placeholder: `<img src="logo.png" alt="Ashish Finance Services">`  
+  *(Logo will be provided by client — keep `logo.png` as filename)*
+- Active page link underlined in gold
+- Mobile: hamburger menu with slide-down gold-border dropdown
+- WhatsApp floating button (bottom-right corner on ALL pages):  
+  Gold circle with WhatsApp icon, links to `https://wa.me/[PHONE]`
+
+---
+
+## PAGE 1: HOME (`index.html`)
+
+> Follow the client's hand-drawn layout sketch exactly:
+
+### Section 1 — HERO / HEADER STRIP
+Full-width dark banner with subtle gold radial glow:
+
+**Left side:**
+- WhatsApp button (gold pill button): "WhatsApp वर संपर्क करा"
+
+**Center/Right:**
+- Name: `MR. ASHISH VILAS URKUDE`  
+  Styled in gold, Playfair Display, large
+- Subtitle line 1: `Stock Market Authorised Person`
+- Subtitle line 2: `6 Years Experience in Stock Market`
+- Small Marathi line below: `"विश्वासार्ह आर्थिक मार्गदर्शन"`  
+  *(Translation: Trusted Financial Guidance)*
+
+### Section 2 — INTRO VIDEO
+Centered section with dark card, gold border:
+
+```
+┌─────────────────────────────────────────┐
+│                                         │
+│     🎬  My Intro Video                  │
+│     [ YouTube embed placeholder ]       │
+│     माझा परिचय व्हिडिओ                  │
+│                                         │
+└─────────────────────────────────────────┘
+```
+
+- Embed a YouTube video iframe (client will provide URL — use placeholder `YOUR_YOUTUBE_VIDEO_ID`)
+- Gold border around video container
+- Caption below: `"Ashish Urkude यांचा थेट परिचय"`
+
+### Section 3 — INTRODUCTION / TAGLINE TEXT BLOCK
+Full-width centered section:
+
+- Large headline: **"Grow Your Wealth with Smart Investment Solutions"**
+- Subheadline in Marathi: `"तुमचे पैसे वाढवा — सोपे, स्पष्ट आणि विश्वासार्ह मार्गदर्शनाने"`
+- Brand tagline badge: `✦ Invest · Grow · Succeed ✦`
+- One-liner: *"Trusted Finance Growth Services"*
+- CTA Button (gold filled): `Contact Us` → links to `contact.html`
+
+### Section 4 — VISITING / CLIENT PHOTOS GALLERY
+3-column photo grid with gold borders:
+
+```
+┌──────────┐  ┌──────────┐  ┌──────────┐
+│ Visiting │  │  Photo   │  │  Photo   │
+│  Photo   │  │    2     │  │    3     │
+└──────────┘  └──────────┘  └──────────┘
+```
+
+- Placeholder images with label `"Client Visit Photo"`
+- Marathi caption: `"आमचे समाधानी ग्राहक"`  
+  *(Our Satisfied Clients)*
+- On mobile: single column
+
+### Section 5 — TRUST COUNTERS (Stats Bar)
+4 gold counter cards in a row:
+
+| Counter | Value | Marathi Label |
+|---------|-------|---------------|
+| Customers | 1000+ | ग्राहक |
+| SIP Investors | 500+ | SIP गुंतवणूकदार |
+| Years Experience | 6+ | वर्षांचा अनुभव |
+| Certifications | NISM Certified | प्रमाणित सल्लागार |
+
+- Animated count-up on scroll using JavaScript
+
+### Section 6 — SOCIAL MEDIA LINKS
+2-column row:
+
+```
+[Instagram Logo + Handle]     [Facebook Logo + Handle]
+```
+
+- Gold icons, dark card background
+- Links open in new tab
+
+### Section 7 — QUICK CONTACT STRIP
+3-column strip at bottom of home page:
+
+```
+[📞 Contact]     [📧 Email]     [🏛 License]
+```
+
+- "License" box links to `license.html`
+- "Contact" links to `contact.html`
+- Email shown as clickable mailto link
+
+### Section 8 — TESTIMONIALS
+3 testimonial cards in a row (gold border cards):
+- Client name, short quote (placeholder), star rating (5 stars in gold)
+- Marathi quote example: `"Ashish sir मुळे माझी गुंतवणूक योग्य दिशेने गेली"`
+
+### FOOTER
+- Logo + tagline
+- Quick links: Home | About | Services | License | Contact
+- Social icons
+- Legal links: Privacy Policy | Terms & Conditions
+- Copyright: `© 2024 Ashish Finance Services. All Rights Reserved.`
+- Small Marathi line: `"आर्थिक स्वातंत्र्याच्या दिशेने — आमच्यासोबत"`
+
+---
+
+## PAGE 2: ABOUT (`about.html`)
+
+### Hero Banner
+- Title: `About Us — आमच्याबद्दल`
+- Gold underline, dark background
+
+### Brand Story Section
+Two-column layout:
+- **Left**: Professional photo of Ashish Urkude (placeholder `ashish-photo.jpg`)
+- **Right**: 
+  - Heading: `Our Story — आमची कहाणी`
+  - Body: *"Ashish Finance Service was started with the aim of helping people understand and grow their money through smart investment strategies. We focus on simple, clear and practical guidance in stock market and mutual funds to help clients achieve long-term financial growth."*
+  - Marathi version: `"Ashish Finance Service ची सुरुवात लोकांना त्यांचे पैसे समजून घेण्यास आणि हुशार गुंतवणूक धोरणांद्वारे वाढवण्यास मदत करण्याच्या उद्देशाने झाली."`
+
+### Mission & Vision Cards
+Side-by-side gold-border cards:
+
+**Mission — ध्येय:**
+> "Our mission is to provide simple and trusted financial guidance to help people grow their wealth through smart investments."
+> Marathi: `"सोप्या आणि विश्वासार्ह मार्गदर्शनाद्वारे लोकांची संपत्ती वाढवणे हे आमचे ध्येय आहे."`
+
+**Vision — दृष्टिकोन:**
+> "Our vision is to become a trusted name in financial services and help maximum people achieve financial freedom."
+> Marathi: `"आर्थिक सेवांमध्ये एक विश्वासार्ह नाव बनणे आणि जास्तीत जास्त लोकांना आर्थिक स्वातंत्र्य मिळवण्यास मदत करणे."`
+
+### Why Choose Us — आम्हालाच का निवडा?
+4 feature cards in a grid (gold icon + heading + description):
+1. 🎯 Personalized Guidance — वैयक्तिक मार्गदर्शन
+2. 📈 Long-Term Wealth Focus — दीर्घकालीन संपत्ती
+3. 🤝 Trusted & Transparent — विश्वासार्ह
+4. 📚 Simple Strategies — सोपे धोरण
+
+### Credentials / Certifications Strip
+- NISM Certified badge
+- SEBI Registered (if applicable — use placeholder)
+- Angel One Authorised Person
+
+---
+
+## PAGE 3: SERVICES (`services.html`)
+
+### Hero Banner
+- Title: `Our Services — आमच्या सेवा`
+
+### Services Grid
+7 service cards in a responsive grid (2–3 per row on desktop, 1 on mobile):
+
+Each card has:
+- Gold icon (use relevant emoji or SVG)
+- English service name (large)
+- Marathi name (smaller, below)
+- Short description
+- "Enquire Now" button → links to contact page
+
+| # | English | Marathi |
+|---|---------|---------|
+| 1 | Stock Market Investment Guidance | शेअर बाजार गुंतवणूक मार्गदर्शन |
+| 2 | Mutual Fund Investment | म्युच्युअल फंड गुंतवणूक |
+| 3 | F&O Trading Support | F&O ट्रेडिंग सपोर्ट |
+| 4 | Demat Account Opening (Angel One) | डिमॅट खाते उघडणे (Angel One) |
+| 5 | Portfolio Management Guidance | पोर्टफोलिओ व्यवस्थापन |
+| 6 | Financial Planning | आर्थिक नियोजन |
+| 7 | Beginner Investment Training | नवीन गुंतवणूकदारांसाठी प्रशिक्षण |
+
+### CTA Banner
+Full-width gold gradient banner:
+- Text: `"Start Your Investment Journey Today — आजच सुरुवात करा"`
+- Button: `Contact Us` → `contact.html`
+
+---
+
+## PAGE 4: LICENSE (`license.html`)
+
+> This page opens when user clicks "License" from the footer or contact strip on homepage.
+
+### Hero Banner
+- Title: `Licenses & Certifications — परवाने आणि प्रमाणपत्रे`
+- Subtitle: `"Our credentials that make us a trusted financial advisor"`
+- Marathi: `"आमची विश्वासार्हता सिद्ध करणारी प्रमाणपत्रे"`
+
+### License Cards Grid
+Each license is a premium card with gold border:
+
+```
+┌──────────────────────────────────────┐
+│  [Certificate Image / Placeholder]   │
+│  ─────────────────────────────────── │
+│  Certificate Name (English)          │
+│  प्रमाणपत्र नाव (Marathi)            │
+│  Issuing Authority                   │
+│  Valid Until: [Date]                 │
+│  [ View Certificate ] button         │
+└──────────────────────────────────────┘
+```
+
+**Pre-fill with these placeholder license cards:**
+1. **NISM Series VIII — Equity Derivatives** | NISM | Certificate No: [PLACEHOLDER]
+2. **NISM Series V-A — Mutual Fund Distributors** | NISM | Certificate No: [PLACEHOLDER]
+3. **Angel One Authorised Person Certificate** | Angel One | Reg No: [PLACEHOLDER]
+4. **SEBI Registration** (if applicable) | SEBI | Reg No: [PLACEHOLDER]
+5. *(Add more cards as needed — client will fill details)*
+
+- "View Certificate" button opens certificate image in a **lightbox modal** (full-screen overlay with gold border)
+- Each card has a small badge: `✔ Verified` in gold
+
+### Note at bottom
+Small italic text:
+> *"All licenses and certifications are regularly renewed and compliant with SEBI regulations."*
+> Marathi: `"सर्व परवाने नियमितपणे नूतनीकरण केले जातात आणि SEBI नियमांचे पालन केले जाते."`
+
+---
+
+## PAGE 5: CONTACT (`contact.html`)
+
+### Hero Banner
+- Title: `Contact Us — आमच्याशी संपर्क करा`
+
+### Contact Info Cards (3 cards in a row)
+Each card: dark background, gold icon, gold border on hover
+
+**Card 1 — Phone:**
+- Icon: 📞
+- Label: `Call Us — फोन करा`
+- Value: `+91 [PHONE NUMBER]` (placeholder)
+- Button: `Call Now`
+
+**Card 2 — Email:**
+- Icon: 📧
+- Label: `Email Us — ईमेल करा`
+- Value: `[EMAIL ADDRESS]` (placeholder)
+- Button: `Send Email`
+
+**Card 3 — WhatsApp:**
+- Icon: 💬
+- Label: `WhatsApp — व्हॉट्सअ‍ॅप`
+- Value: `+91 [PHONE NUMBER]` (placeholder)
+- Button: `Chat on WhatsApp` → `https://wa.me/[PHONE]`
+- Button styled in green (`#25D366`) as exception to gold theme
+
+### Contact Form
+Clean gold-bordered form:
+```
+Full Name — पूर्ण नाव         [________________]
+Phone Number — मोबाइल नंबर   [________________]
+Email — ईमेल                  [________________]
+Service Interested In (Dropdown):
+  → Stock Market Guidance
+  → Mutual Fund Investment
+  → F&O Support
+  → Demat Account
+  → Portfolio Management
+  → Financial Planning
+  → Beginner Training
+Message — संदेश               [________________]
+                               [ Submit / पाठवा ]
+```
+
+- Form submit shows a success toast notification: `"धन्यवाद! आम्ही लवकरच संपर्क करू."` *(Thank you! We will contact you soon.)*
+- Form is frontend-only (no backend) — on submit, show success message
+
+### Working Hours
+Gold card:
+- `Mon – Sat: 9:00 AM – 7:00 PM`
+- `Sunday: By Appointment`
+- Marathi: `"सोमवार ते शनिवार: सकाळी ९ ते संध्याकाळी ७"`
+
+---
+
+## LEGAL PAGES
+
+### `privacy-policy.html`
+- Standard privacy policy page
+- Heading: `Privacy Policy — गोपनीयता धोरण`
+- Sections: Data Collection, Usage, Third Parties, Contact
+- Linked in footer
+
+### `terms.html`
+- Standard terms & conditions page
+- Heading: `Terms & Conditions — नियम व अटी`
+- Sections: Services, Disclaimer, Liability, Contact
+- Linked in footer
+
+---
+
+## FLOATING ELEMENTS (All Pages)
+
+### WhatsApp Floating Button
+- Fixed bottom-right corner
+- Gold circle with WhatsApp icon
+- Pulse animation (green glow)
+- `title="Chat on WhatsApp"`
+- Links to: `https://wa.me/[PHONE_NUMBER]`
+
+### Scroll-to-Top Button
+- Fixed bottom-left corner
+- Gold arrow icon
+- Appears after scrolling 300px
+
+---
+
+## ANIMATIONS & INTERACTIONS
+
+1. **Fade-in on scroll**: All section cards use `IntersectionObserver` — slide up + fade in
+2. **Counter animation**: Stats (1000+, 500+, 6+) count up when section enters viewport
+3. **Navbar**: Shrinks slightly on scroll, gains stronger gold border
+4. **Hover effects**: Cards lift with `translateY(-4px)` + gold glow shadow
+5. **Gold shimmer**: Apply a subtle shimmer sweep animation on the hero headline text
+6. **Page transitions**: Smooth fade between pages using CSS transitions
+
+---
+
+## FILE STRUCTURE
+
+```
+ashish-finance-services/
+│
+├── index.html              ← Home Page
+├── about.html              ← About Page
+├── services.html           ← Services Page
+├── license.html            ← License Page
+├── contact.html            ← Contact Page
+├── privacy-policy.html     ← Legal
+├── terms.html              ← Legal
+│
+├── style.css               ← All shared styles + CSS variables
+├── script.js               ← Shared JS (navbar, scroll, counters, lightbox)
+│
+├── assets/
+│   ├── logo.png            ← Client logo (to be added)
+│   ├── ashish-photo.jpg    ← Client photo (to be added)
+│   ├── visiting-photo-1.jpg
+│   ├── visiting-photo-2.jpg
+│   ├── visiting-photo-3.jpg
+│   └── certificates/
+│       ├── cert-1.jpg      ← License images (to be added)
+│       └── cert-2.jpg
+```
+
+---
+
+## PLACEHOLDER CONTENT TO REPLACE
+
+When handing off to client, mark these for replacement:
+
+| Placeholder | Replace With |
+|-------------|-------------|
+| `[PHONE NUMBER]` | Actual phone number |
+| `[EMAIL ADDRESS]` | Actual email address |
+| `YOUR_YOUTUBE_VIDEO_ID` | YouTube video ID from URL |
+| `logo.png` | Client-provided logo file |
+| `ashish-photo.jpg` | Professional photo of Ashish |
+| `cert-1.jpg`, `cert-2.jpg`... | Actual certificate scan images |
+| Instagram handle | Actual Instagram profile URL |
+| Facebook handle | Actual Facebook profile URL |
+| Certificate numbers | Actual NISM/SEBI cert numbers |
+
+---
+
+## MARATHI PHRASES QUICK REFERENCE
+
+| English | Marathi |
+|---------|---------|
+| Invest, Grow, Succeed | गुंतवा, वाढवा, यशस्वी व्हा |
+| Contact Us | आमच्याशी संपर्क करा |
+| Our Services | आमच्या सेवा |
+| Trusted Financial Guidance | विश्वासार्ह आर्थिक मार्गदर्शन |
+| Years of Experience | वर्षांचा अनुभव |
+| Our Satisfied Clients | आमचे समाधानी ग्राहक |
+| Start Today | आजच सुरुवात करा |
+| About Us | आमच्याबद्दल |
+| Our Certifications | आमची प्रमाणपत्रे |
+| Financial Freedom | आर्थिक स्वातंत्र्य |
+
+---
+
+*Built for Ashish Finance Services — Premium Financial Advisory Website*
+*Theme: Gold & Black | Language: English + Marathi | Pages: 5 + 2 Legal*
