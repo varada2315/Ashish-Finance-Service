@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { CheckCircle2, Target, Eye, Shield, BookOpen } from "lucide-react";
+import { CheckCircle2, Target, Eye, Shield, BookOpen, TrendingUp } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import afcLogo from "@assets/file_000000001d647208947e624e945949d3_-_Ashish_Urkude_1776087586397.png";
 

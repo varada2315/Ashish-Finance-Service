@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className="pt-24 pb-16 min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+      <section className="relative py-16 md:py-20 overflow-hidden gradient-secondary">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <Section delay={100} className="order-2 lg:order-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <Section delay={100} className="order-2 md:order-1">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-2">
+                <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full glass-effect border-primary/30 text-primary font-medium mb-2 animate-pulse-glow text-sm">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -25,39 +25,40 @@ export default function Home() {
                 
                 <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight">
                   <span className="block text-foreground">MR. ASHISH VILAS</span>
-                  <span className="block gold-text-gradient pb-2">URKUDE</span>
+                  <span className="block text-gradient pb-2 animate-float">URKUDE</span>
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-muted-foreground font-light">
+                <p className="text-lg md:text-xl text-muted-foreground font-light">
                   Stock Market Authorised Person
                 </p>
-                <p className="text-lg text-primary font-medium">
+                <p className="text-base md:text-lg text-primary font-medium">
                   6 Years Experience in Stock Market
                 </p>
                 
-                <p className="text-xl md:text-2xl text-foreground font-marathi border-l-4 border-primary pl-4 py-1 italic">
+                <p className="text-lg md:text-xl text-foreground font-marathi border-l-4 border-primary pl-3 py-1 italic glass-effect rounded-r-lg">
                   "विश्वासार्ह आर्थिक मार्गदर्शन"
                 </p>
                 
-                <div className="pt-4 flex flex-wrap gap-4">
-                  <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 h-14">
+                <div className="pt-4 flex flex-wrap gap-3">
+                  <Button asChild size="sm" className="gradient-primary text-primary-foreground hover:shadow-glow hover-lift text-sm px-6 h-10 rounded-full">
                     <a href="https://wa.me/9999999999" target="_blank" rel="noreferrer">
                       WhatsApp वर संपर्क करा
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10 hover:text-primary text-base px-8 h-14">
+                  <Button asChild size="sm" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10 hover:text-primary text-sm px-6 h-10 rounded-full hover-lift">
                     <Link href="/services">
-                      Explore Services <ArrowRight className="ml-2 h-5 w-5" />
+                      Explore Services <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
               </div>
             </Section>
             
-            <Section delay={300} className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md aspect-square rounded-full border-2 border-primary/30 p-2 bg-gradient-to-tr from-background via-primary/10 to-background flex items-center justify-center">
-                <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-                <img src={afcLogo} alt="Ashish Finance Services Logo" className="w-2/3 h-auto relative z-10 drop-shadow-2xl" />
+            <Section delay={300} className="order-1 md:order-2 flex justify-center">
+              <div className="relative w-full max-w-xs aspect-square rounded-full border-2 border-primary/30 p-2 bg-gradient-to-tr from-background via-primary/10 to-background flex items-center justify-center hover-lift">
+                <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-full"></div>
+                <img src={afcLogo} alt="Ashish Finance Services Logo" className="w-2/3 h-auto relative z-10 drop-shadow-2xl animate-float" />
               </div>
             </Section>
           </div>
@@ -128,31 +129,31 @@ export default function Home() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <Section delay={100} className="text-center p-6 luxury-card rounded-xl">
-              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+            <Section delay={100} className="text-center p-8 gradient-card rounded-2xl hover-lift border border-primary/20 shadow-glow/20">
+              <div className="text-5xl md:text-6xl font-serif font-bold text-gradient mb-3">
                 <Counter end={1000} suffix="+" />
               </div>
-              <p className="text-foreground font-medium text-lg">Customers</p>
-              <p className="text-muted-foreground text-sm font-marathi mt-1">ग्राहक</p>
+              <p className="text-foreground font-semibold text-xl">Customers</p>
+              <p className="text-muted-foreground text-sm font-marathi mt-2">ग्राहक</p>
             </Section>
-            <Section delay={200} className="text-center p-6 luxury-card rounded-xl">
-              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+            <Section delay={200} className="text-center p-8 gradient-card rounded-2xl hover-lift border border-primary/20 shadow-glow/20">
+              <div className="text-5xl md:text-6xl font-serif font-bold text-gradient mb-3">
                 <Counter end={500} suffix="+" />
               </div>
-              <p className="text-foreground font-medium text-lg">SIP Investors</p>
-              <p className="text-muted-foreground text-sm font-marathi mt-1">SIP गुंतवणूकदार</p>
+              <p className="text-foreground font-semibold text-xl">SIP Investors</p>
+              <p className="text-muted-foreground text-sm font-marathi mt-2">SIP गुंतवणूकदार</p>
             </Section>
-            <Section delay={300} className="text-center p-6 luxury-card rounded-xl">
-              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+            <Section delay={300} className="text-center p-8 gradient-card rounded-2xl hover-lift border border-primary/20 shadow-glow/20">
+              <div className="text-5xl md:text-6xl font-serif font-bold text-gradient mb-3">
                 <Counter end={6} suffix="+" />
               </div>
-              <p className="text-foreground font-medium text-lg">Years Experience</p>
-              <p className="text-muted-foreground text-sm font-marathi mt-1">वर्षांचा अनुभव</p>
+              <p className="text-foreground font-semibold text-xl">Years Experience</p>
+              <p className="text-muted-foreground text-sm font-marathi mt-2">वर्षांचा अनुभव</p>
             </Section>
-            <Section delay={400} className="text-center p-6 luxury-card rounded-xl flex flex-col justify-center items-center">
-              <Award className="h-12 w-12 text-primary mb-3" />
-              <p className="text-foreground font-medium text-lg">NISM Certified</p>
-              <p className="text-muted-foreground text-sm font-marathi mt-1">प्रमाणित सल्लागार</p>
+            <Section delay={400} className="text-center p-8 gradient-card rounded-2xl hover-lift border border-primary/20 shadow-glow/20 flex flex-col justify-center items-center">
+              <Award className="h-14 w-14 text-gradient mb-4" />
+              <p className="text-foreground font-semibold text-xl">NISM Certified</p>
+              <p className="text-muted-foreground text-sm font-marathi mt-2">प्रमाणित सल्लागार</p>
             </Section>
           </div>
         </div>

@@ -29,8 +29,8 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 glass-nav",
-        isScrolled ? "scrolled py-2" : "py-4"
+        "fixed top-0 w-full z-50 glass-effect border-b border-primary/30 backdrop-blur-lg transition-all duration-300",
+        isScrolled ? "py-3 shadow-glow" : "py-5"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -57,9 +57,9 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium uppercase tracking-wider transition-colors hover:text-primary",
+                "text-sm font-medium uppercase tracking-wider transition-all duration-300 hover:text-primary hover-lift",
                 location === link.href
-                  ? "text-primary border-b-2 border-primary pb-1"
+                  ? "text-primary gradient-primary bg-clip-text border-b-2 border-primary pb-1"
                   : "text-foreground/80"
               )}
             >
@@ -68,7 +68,7 @@ export default function Navbar() {
           ))}
           <Button
             asChild
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 shadow-[0_0_15px_rgba(201,168,76,0.3)] hover:shadow-[0_0_25px_rgba(201,168,76,0.5)] transition-all"
+            className="gradient-primary text-primary-foreground font-semibold rounded-full px-6 hover:shadow-glow hover-lift transition-all"
           >
             <a href="https://wa.me/9999999999" target="_blank" rel="noreferrer">
               WhatsApp
@@ -87,14 +87,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-b border-primary/30 py-4 px-4 flex flex-col gap-4 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full glass-effect border-b border-primary/30 py-4 px-4 flex flex-col gap-2 shadow-2xl backdrop-blur-xl z-50">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "block text-lg font-medium py-2 border-b border-white/5",
-                location === link.href ? "text-primary" : "text-foreground/80"
+                "block text-lg font-medium py-4 px-4 rounded-lg hover:text-primary hover-lift transition-all hover:bg-primary/10",
+                location === link.href ? "text-primary gradient-primary bg-clip-text" : "text-foreground/80"
               )}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -103,7 +103,7 @@ export default function Navbar() {
           ))}
           <Button
             asChild
-            className="bg-primary text-primary-foreground font-semibold w-full mt-2"
+            className="gradient-primary text-primary-foreground font-semibold w-full mt-3 py-4 rounded-xl hover:shadow-glow text-lg"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <a href="https://wa.me/9999999999" target="_blank" rel="noreferrer">
