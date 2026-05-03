@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, ChevronRight, Phone, Mail, Award, TrendingUp 
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { Counter } from "@/components/ui/counter";
-import afcLogo from "@assets/file_000000001d647208947e624e945949d3_-_Ashish_Urkude_1776087586397.png";
+
 
 export default function Home() {
   return (
@@ -55,10 +55,14 @@ export default function Home() {
             </Section>
             
             <Section delay={300} className="order-1 md:order-2 flex justify-center">
-              <div className="relative w-full max-w-xs aspect-square rounded-full border-2 border-primary/30 p-2 bg-gradient-to-tr from-background via-primary/10 to-background flex items-center justify-center hover-lift">
-                <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-full"></div>
-                <img src={afcLogo} alt="Ashish Finance Services Logo" className="w-2/3 h-auto relative z-10 drop-shadow-2xl animate-float" />
+              <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl border-2 border-primary/30 p-1 bg-gradient-to-tr from-background via-primary/10 to-background flex items-center justify-center hover-lift overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-3xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-2xl"></div>
+                <img
+                  src="/20-46-27_page-0001.jpg"
+                  alt="Ashish Finance Services"
+                  className="w-full h-full object-cover relative z-10 rounded-xl"
+                />
               </div>
             </Section>
           </div>
